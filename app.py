@@ -1,31 +1,31 @@
 import streamlit as st
 
-st.set_page_config(page_title="DからA, B, Cを計算", layout="centered")
+st.set_page_config(page_title="本体金額計から品名, 安全対策費, 法定福利費を計算", layout="centered")
 
 # タイトル
-st.title("DからA, B, Cを計算するツール")
+st.title("本体金額計から品名, 安全対策費, 法定福利費を計算するツール")
 
 # 説明テキスト
 st.markdown("""
-このツールは、Dの値からA, B, Cを計算します。  
+このツールは、本体金額計の値から品名, 安全対策費, 法定福利費を計算します。  
 計算式は以下のとおりです：
 
-- A × 0.08 = B  
-- A × 0.15 = C  
-- A + B + C = D  
-→ つまり **D = A × 1.23**
+- 品名 × 0.08 = 安全対策費
+- 品名 × 0.15 = 法定福利費
+- 品名 + 安全対策費 + 法定福利費 = 本体金額計  
+→ つまり **本体金額計 = 品名 × 1.23**
 """)
 
 # 注意書き
 with st.expander("📌 使用上の注意"):
     st.warning("""
-- Dの値は半角数字で入力してください。
+- 本体金額計の値は半角数字で入力してください。
 - カンマ（,）や全角数字は使わないでください。
 - 小数（例：123.45）も入力可能です。
     """)
 
 # 入力フィールド
-d_input = st.text_input("D の値を入力してください（例：123）", value="")
+d_input = st.text_input("本体金額計 の値を入力してください（例：123）", value="")
 
 # 計算処理
 if st.button("計算する"):
@@ -36,9 +36,9 @@ if st.button("計算する"):
         c = a * 0.15
 
         st.success("✅ 計算結果")
-        st.write(f"A = {a:.2f}")
-        st.write(f"B = {b:.2f}")
-        st.write(f"C = {c:.2f}")
+        st.write(f"品名 = {a:.2f}")
+        st.write(f"安全対策費 = {b:.2f}")
+        st.write(f"法定福利費 = {c:.2f}")
     except ValueError:
         st.error("数値を正しく入力してください（例：123.45）")
 
