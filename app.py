@@ -27,6 +27,8 @@ with st.expander("📌 使用上の注意"):
 # 入力フィールド
 st.markdown('<span style="color:red;">本体金額計(円)の値を入力してください（例：123）</span>', unsafe_allow_html=True)
 
+# 入力欄（ラベルなし）
+d_input = st.text_input("", value="")
 
 # 計算処理
 if st.button("計算する"):
