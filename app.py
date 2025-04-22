@@ -24,7 +24,7 @@ with st.expander("📌 使用上の注意"):
     """)
 
 # 入力フィールド
-d_input = st.text_input("本体金額計 の値を入力してください（例：123）", value="")
+d_input = st.text_input("本体金額計(円)の値を入力してください（例：123）", value="")
 
 # 計算処理
 if st.button("計算する"):
