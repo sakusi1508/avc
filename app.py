@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="安全対策費などを計算", layout="centered")
 
 # タイトル
-st.title("このツールは、本体金額計(円)から安全対策費と法定福利費などを計算するツール ")
+st.title("本体金額計(円)から安全対策費と法定福利費などを計算するツール ")
 
 # 説明テキスト
 st.markdown("""
