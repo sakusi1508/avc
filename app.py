@@ -36,7 +36,7 @@ if st.button("計算する"):
         d = float(d_input)
         a = d / 1.23
         b = a * 0.08
-        c = a * 0.15
+        c = a * 0.165
 
         st.success("✅ 計算結果")
         st.write(f"品名 = {a:.2f}")
