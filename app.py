@@ -45,6 +45,3 @@ if st.button("計算する"):
     except ValueError:
         st.error("数値を正しく入力してください（例：123.45）")
 
-# フッター
-st.markdown("---")
-st.caption("© 2025 ABC Calculator")
